@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+bool occurrencesEqual(char *str) {
+    int counts[26] = {0};
+    for (int i = 0; str[i] != '\0'; i++) {
+        char ch = str[i];
+        if ('a' <= ch && ch <= 'z') {
+            counts[ch - 'a']++;
+        }
+    }
+    int firstNonZeroCount = -1;
+    for (int i = 0; i < 26; i++) {
+        if (counts[i] != 0) {
+            firstNonZeroCount = counts[i];
+            break;
+        }
+    }
+  for (int i = 0; i < 26; i++) {
+        if (counts[i] != 0 && counts[i] != firstNonZeroCount) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    scanf("%[^\n]", str);
+
+    if (occurrencesEqual(str)) {
+        printf("Occurrences of all alphabets are equal.\n");
+    } else {
+        printf("Occurrences of all alphabets are not equal.\n");
+    }
+
+    return 0;
+}
