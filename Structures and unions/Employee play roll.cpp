@@ -1,4 +1,4 @@
-Write a C program to generate employee payroll using structures.
+//Write a C program to generate employee payroll using structures.
 
 #include<iostream>
 #include<iomanip>
