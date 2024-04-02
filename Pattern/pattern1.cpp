@@ -1,3 +1,18 @@
+/*Write a Program to generate the following pattern :
+
+Sample Input:
+5
+
+Sample Output:
+
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+
+*/
+
 #include<iostream>
 using namespace std;
 int main()
